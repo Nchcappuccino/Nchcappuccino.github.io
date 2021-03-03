@@ -14,7 +14,7 @@ permalink: /blog/adding-categories-tags-in-posts/
 # 内容  
 内容はタイトル通り、ロボコンでよく使われるパーツ マイコン編です。  
 この記事は入門と言いながらも、難しい内容も結構混ざっているので分からないところは読み飛ばしながらでかまいません。  
-今の自分では理解できなくても、**半年後のじぶんなら理解できる**と考えれば問題ないです。
+今の自分では理解できなくても、**半年後の自分なら理解できる**と考えれば問題ないです。
 
 # マイコン
 マイコンとは簡単に言うと、人間でいう頭脳のことで、プログラミングをすることによって命令ができるようになります。  
@@ -25,19 +25,20 @@ permalink: /blog/adding-categories-tags-in-posts/
 - PIC
 
 などがあります。
-ちなみに僕がマイコンを選ぶときに大切にしていることは
+僕はマイコンを選ぶときに大切にしていることは
 - Arduinoのライブラリを使うことができるか
 - 値段
-- 開発の経験になれているもの
+- なるべく慣れているものを選ぶ
 
 を大切にしています。
 ### Arduino(アルディーノ)
-![Arduino](assets/img/posts/20210303/arduino.jpg)  
+![Arduino](/assets/img/posts/20210303/arduino.jpg)  
 [Arduino](https://akizukidenshi.com/catalog/g/gM-07385/)はマイコンの名前ではなくマイコンボードの名前ですが、特に理由がない限りArduinoで通じます。  
 ちなみにマイコンとマイコンボードの違いは
 - マイコンはチップ単体のみのこと
 - マイコンボードはチップが実装されてる基板全体のことを指します。  
-![Arduino_exprain](assets/img/posts/20210303/arduino_explain.jpg)  
+
+![Arduino_exprain](/assets/img/posts/20210303/arduino_explain.jpg)  
 Arduino Unoで言うと、マイコンはATmega328P、マイコンボードの名前がArduino Unoになります。  
 実はArduinoにはマイコンが2つ乗ってたりします(知らなくていい)  
 Arduinoの特徴としては
@@ -57,7 +58,7 @@ Arduinoの特徴としては
 Arduinoの開発環境でもっと強いマイコンを使えるようにしたのがArduinoから派生したマイコンです。  
 派生なので種類は無数にありますが、[ESP32](https://akizukidenshi.com/catalog/g/gM-15673/)と[Teensy](https://www.switch-science.com/catalog/5877/)が有名です。
 ### ESP32
-![ESP32](assets/img/posts/20210303/ESP32.jpg)  
+![ESP32](/assets/img/posts/20210303/ESP32.jpg)  
 ロボ研では普段はこのマイコンを使ってます。ロボコンで使ってるチームがいる以外にも、IoT製品などにもよく使われています。  
 ちなみに[ESP32](https://akizukidenshi.com/catalog/g/gM-15673/)は他のマイコンと比べて種類が少なく、数種類しかありません。
 
@@ -75,7 +76,7 @@ Arduinoの開発環境でもっと強いマイコンを使えるようにした�
 [M5Stack](https://www.switch-science.com/catalog/3647/)という面白いのもあるので興味のある方は調べてみてください。  
 あと、中華のESP32も出回っていますが、技適が通っていないことがあるので購入するときは信頼できるサイトで買いましょう。
 ### Teensy
-![Teensy](assets/img/posts/20210303/teensy.jpg)
+![Teensy](/assets/img/posts/20210303/teensy.jpg)  
 [Teensy](https://www.switch-science.com/catalog/5877/)は僕や僕の周りに使ってる人間がいないので詳しいことは分からないので、僕の印象で書きます。  
 
 このマイコンも高専ロボコンだけでなく、RCJ(ロボカップジュニア)やロボマスなどでよく使われています。  
@@ -89,7 +90,7 @@ Arduinoの開発環境でもっと強いマイコンを使えるようにした�
 
 正直Teensyは高いので使う意味はない気がします。
 ### STM32(Nucleo)
-![STM32](assets/img/posts/20210303/stm32.jpg)  
+![STM32](/assets/img/posts/20210303/stm32.jpg)  
 [STM32](https://akizukidenshi.com/catalog/g/gM-10176/)は扱えれば最強のマイコンです。  
 僕も今頑張って使おうとてます。
 ただ扱うにはかなりの知識と技術が必要です。  
