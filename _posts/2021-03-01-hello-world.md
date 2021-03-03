@@ -9,7 +9,7 @@ category: ['Other']
 # thumbnail: 
 # keywords: 
 usemathjax: false
-permalink: /blog/adding-categories-tags-in-posts/
+permalink: /blog/2021-03-01/
 ---
 ## Hello World
 Hello World!

@@ -6,7 +6,7 @@ author: yamaguchi
 date: '2021-03-03 11:28:00 +0900'
 category: ['入門','パーツ紹介']
 usemathjax: false
-permalink: /blog/adding-categories-tags-in-posts/
+permalink: /blog/2021-03-01/
 ---
 # ロボコンでよく使われるパーツ マイコン編
 こんにちは！山口です。  
