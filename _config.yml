@@ -1,7 +1,7 @@
 title: YamaBlog
 subtitle: よわよわロボコニスト
 description: >- # this means to ignore newlines until "baseurl:"
-  サブタイトル
+  技術やそれ以外のことについていろいろ語ります
 
 url: "https://Nchcappuccino.github.io" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
