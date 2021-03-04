@@ -93,8 +93,9 @@ Arduinoの開発環境でもっと強いマイコンを使えるようにした�
 - 英語込みで考えても情報が少ない
 
 正直Teensyは高いので使う意味はない気がします。
-### STM32(Nucleo)
+### STM32(Nucleo)  
 ![STM32](/assets/img/posts/20210303/stm32.jpg)  
+Nucleoと書いてヌクレオと読みます。    
 [STM32](https://akizukidenshi.com/catalog/g/gM-10176/)は扱えれば最強のマイコンです。  
 僕も扱っていますが、ほとんど使いこなせていません。
 扱うにはかなりの知識と技術が必要です。  
