@@ -36,6 +36,7 @@ UARTやI2Cは通信方式のことです。これらの通信方式が何か分�
 
 代表的な物としては[HCSR04](https://akizukidenshi.com/catalog/g/gM-11009/)があります。  
 利点は安いことくらい。  
+
 ![HCSR04](/assets/img/posts/20210304/hcsr04.jpg)  
 
 ### ToFセンサー  
@@ -45,10 +46,11 @@ ToFセンサーは超音波センサーと違い、赤外線を出力するの�
 
 I2Cなどで通信をする必要のあるセンサーはToFセンサーのように高性能なセンサーに使われることがほとんどです。その分値段は、電圧でセンサーの値が読める物と比べると高いです。  
 
-ToFセンサー代表的なものとしてはVLシリーズです。  
+ToFセンサー代表的なものとしてはVLシリーズです。 
+
 ![ToF_VL](/assets/img/posts/20210304/tof_vl.jpg)  
-https://store.shopping.yahoo.co.jp/suzakulab/pololu-3415.html
-https://store.shopping.yahoo.co.jp/suzakulab/Pololu-2489.html  
+<https://store.shopping.yahoo.co.jp/suzakulab/pololu-3415.html>
+<https://store.shopping.yahoo.co.jp/suzakulab/Pololu-2489.html>  
 この2つは性能は全く異なるものの外形が一緒なので、扱いが楽です。  
 
 ちなみにですが、このToFセンサーのようにPololuから発売されてるセンサーはいろいろと素晴らしいのでおすすめです。  
@@ -60,7 +62,7 @@ LidarセンサーはToFセンサーを応用させたセンサーで、全方位
 ジャイロセンサーとは別名角速度センサーと呼ばれ、角速度を検出するデバイスのことです。  
 角速度を積分して角度を検出することができます。  
 ジャイロセンサーについて分かりやすいブログを乗っけておくので、必ず読んでみてください。  
-https://garchiving.com/angular-from-angular-acceleration/  
+<https://garchiving.com/angular-from-angular-acceleration/>  
 
 ### 原理
 原理というかジャイロセンサーを理解するための説明です。  
@@ -109,7 +111,7 @@ https://garchiving.com/angular-from-angular-acceleration/
 ### 原理
 こちらの資料をみていただければわかりやすいです。**必ず読んでください！**  
 原理だけでなく自己位置推定の方法も記されているのでちょっと長いけどかなり参考になります。   
-https://github.com/Nchcappuccino/Nchcappuccino.github.io/tree/master/assets/download/encoder_kit06_kaisetsu.pdf
+<https://github.com/Nchcappuccino/Nchcappuccino.github.io/tree/master/assets/download/encoder_kit06_kaisetsu.pdf>
 エンコーダはロボコンでは2相か3相のものが主流で、このように配置されることが多いです。
 ### 代表的なもの
 エンコーダはロボコンでは[AMT102](https://www.mouser.jp/ProductDetail/CUI-Devices/AMT102-V/?qs=WyjlAZoYn533PQfgnorrMg==)が主流です。  
