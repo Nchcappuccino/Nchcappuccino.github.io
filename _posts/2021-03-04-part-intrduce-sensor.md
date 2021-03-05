@@ -96,7 +96,7 @@ LidarセンサーはToFセンサーを応用させたセンサーで、全方位
 - SPIでも通信できる
 - **現在製造されてない(ディスコン)。Amazonとかに在庫はたくさんあるからしばらくは気にしなくていい**
 ##### BNO055
-![BNO055](/assets/img/posts/20210304/BNO055.jpg)
+![BNO055](/assets/img/posts/20210304/bno055.jpg)
 - 高い
 - こちらもクオータニオンを出力してくれる
 - ちゃんと使ったことないから詳しいことはわかんない、ごめんなさい！！！
@@ -121,7 +121,7 @@ LidarセンサーはToFセンサーを応用させたセンサーで、全方位
 
 京大の2019のロボットのエンコーダは[AMT203](https://www.digikey.jp/product-detail/ja/cui-devices/AMT203-V/102-2050-ND/2278846)を使ってるらしいです。  
 SPIでカウントできるのが特徴。
-http://kikaiken.blogspot.com/2019/10/nhkabu2019.html
+<http://kikaiken.blogspot.com/2019/10/nhkabu2019.html>
 
 ちなみに、ロボ研では自作磁器エンコーダを使ってます。安い分、機械の人の手間が増えます()  
 
