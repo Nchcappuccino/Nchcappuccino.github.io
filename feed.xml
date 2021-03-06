@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>YamaBlog</title>
+    <description>技術やそれ以外のことについていろいろ語ります</description>
+    <link>https://Nchcappuccino.github.io/</link>
+    <atom:link href="https://Nchcappuccino.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 06 Mar 2021 02:42:58 +0000</pubDate>
+    <lastBuildDate>Sat, 06 Mar 2021 02:42:58 +0000</lastBuildDate>
+    <generator>Jekyll v4.2.0</generator>
+
+    
+      <item>
+        <title>ロボコンでよく使われるパーツ コネクタ編</title>
+        <description>&lt;p&gt;こんにちは。山口です。&lt;br /&gt;
+今回はパーツ紹介編ラストのコネクタ編です。&lt;br /&gt;
+コネクタ編という名前ではありますが、コネクタだけの理解をしても意味がないのでケーブルについても一緒に説明します。  &lt;br /&gt;
+&lt;strong&gt;今回説明するのはロボコンでの話だということはよく覚えといてください&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;コネクタを使う理由&quot;&gt;コネクタを使う理由&lt;/h1&gt;
+&lt;p&gt;コネクタを使う理由ですが、&lt;strong&gt;ケーブルの抜き差しをしやすくするため&lt;/strong&gt;です。&lt;strong&gt;逆接続を防止する&lt;/strong&gt;というのもあります。  &lt;br /&gt;
+基板同士をつなぐケーブルをはんだ付けしてしまうと、抜き差しが大変になります。場合によってはできなくなります。 &lt;br /&gt;
+コネクタを使う理由は単純ですが、海外のyoububeチャンネルとかだとコネクタを一切使わないではんだ付けだけですべてのケーブルを接続しているのを見るので、そういうのはやめましょう。&lt;/p&gt;
+
+&lt;h1 id=&quot;コネクタって大きく分けるとどんな種類のがあるの&quot;&gt;コネクタって大きく分けるとどんな種類のがあるの？&lt;/h1&gt;
+&lt;p&gt;コネクタは大きく分けると&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;信号線用&lt;/li&gt;
+  &lt;li&gt;電源用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;の2つに分類することができます。&lt;/p&gt;
+&lt;h1 id=&quot;ケーブルの太さについて&quot;&gt;ケーブルの太さについて&lt;/h1&gt;
+&lt;p&gt;信号線のケーブルの太さはAWG20から28くらい、電源のケーブルはAWG14くらいが多く使われます。&lt;br /&gt;
+ちなみにAWGとはケーブルの太さの単位です。&lt;a href=&quot;https://www.batteryspace.jp/html/page28.html&quot;&gt;参照&lt;/a&gt;
+ケーブルの太さに流せる電流は、あくまでも&lt;strong&gt;公称値&lt;/strong&gt;なので、実際にはそれ以上流しても大丈夫です。  &lt;br /&gt;
+ケーブルが溶けたり焦げたりしたら太さを考え直す必要がありますが、最初は考えなくて大丈夫です。&lt;/p&gt;
+&lt;h1 id=&quot;ロボ研ではなんのコネクタを使ってるの&quot;&gt;ロボ研ではなんのコネクタを使ってるの？&lt;/h1&gt;
+&lt;p&gt;ロボ研で使ってるコネクタは、&lt;br /&gt;
+信号線関係はXHコネクタ、電源の基板側に取りつける端子はネジ端子、電源のケーブル同士の接続に使われる端子はTコネクタです。&lt;br /&gt;
+マイコンへの書き込みはUSB-Cを使うのが最近流行ってます。&lt;/p&gt;
+
+&lt;h1 id=&quot;信号線関係のコネクタ&quot;&gt;信号線関係のコネクタ&lt;/h1&gt;
+&lt;p&gt;信号線関係のコネクタは&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;XHコネクタ&lt;/li&gt;
+  &lt;li&gt;XAコネクタ&lt;/li&gt;
+  &lt;li&gt;QIコネクタ&lt;/li&gt;
+  &lt;li&gt;USBコネクタ&lt;/li&gt;
+  &lt;li&gt;RJ45&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;あたりがよく使われます。&lt;/p&gt;
+&lt;h3 id=&quot;xhコネクタ&quot;&gt;XHコネクタ&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210305/xh.jpg&quot; alt=&quot;XH&quot; /&gt;  &lt;br /&gt;
+XHコネクタとはこれです。&lt;br /&gt;
+ケーブルに圧着(くっつける)して実装するのは&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gC-12257/&quot;&gt;これ&lt;/a&gt;、基板に実装するのは&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gC-12249/&quot;&gt;これ&lt;/a&gt; &lt;br /&gt;
+特徴としては&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;縦型と横型のどちらも秋月で手に入る&lt;/li&gt;
+  &lt;li&gt;しっかりしているので勝手に抜けない。&lt;/li&gt;
+  &lt;li&gt;デメリットは抜き差しがしにくいことくらい。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;基本的に特別な理由のある人以外は採用するコネクタはこれでいいと思います。  &lt;br /&gt;
+乾電池であればXHコネクタを使って電源を取り出しても大丈夫です。  &lt;br /&gt;
+ただ、この方法をやるとXHコネクタのところにジャンパー線を差して、いろんなところをショートさせた人がたくさんいたので、基本的には禁止です。&lt;br /&gt;
+後ほど紹介するTコネクタとかをおとなしく使うようにしましょう。&lt;/p&gt;
+&lt;h3 id=&quot;xaコネクタ&quot;&gt;XAコネクタ&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210305/xa.jpg&quot; alt=&quot;XA&quot; /&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.jst-mfg.com/product/detail.php?series=272&quot;&gt;https://www.jst-mfg.com/product/detail.php?series=272&lt;/a&gt;  &lt;br /&gt;
+特徴としては&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;コネクタに爪がついてるため抜き差しがしやすい&lt;/li&gt;
+  &lt;li&gt;秋月では売ってないので入手性が悪い&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;詳しいことは使ったことがないので分からないです… &lt;br /&gt;
+だいたいロボコンではXHコネクタを採用する学校とXAを採用する学校の割合は5:5くらいです。&lt;/p&gt;
+
+&lt;p&gt;ロボ研では昔はXAコネクタを使ってたらしいです。&lt;/p&gt;
+
+&lt;h3 id=&quot;qiコネクタ&quot;&gt;QIコネクタ&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210305/qi.jpg&quot; alt=&quot;qi&quot; /&gt;  &lt;br /&gt;
+名前だけだとピンとこないけど、サーボモータのコネクタに用いられてるやつです。  &lt;a href=&quot;https://akizukidenshi.com/catalog/g/gC-09732/&quot;&gt;これ&lt;/a&gt;&lt;br /&gt;
+特徴としては&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;抜き差しが簡単&lt;/li&gt;
+  &lt;li&gt;強く引っ張ると抜ける&lt;/li&gt;
+  &lt;li&gt;コネクタの向きがどちらでも使えてしまうため&lt;strong&gt;逆接&lt;/strong&gt;してしまうリスクがある。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;逆接のリスクがあるので僕は使わないです。&lt;/p&gt;
+
+&lt;h3 id=&quot;usbコネクタ読み飛ばしても大丈夫&quot;&gt;USBコネクタ(読み飛ばしても大丈夫)&lt;/h3&gt;
+&lt;p&gt;名前の通りUSBコネクタです。 
+パソコンとの接続をするときにUSBケーブルを使うので接続先も必然的にUSBコネクタがついていないといけないです。&lt;/p&gt;
+
+&lt;p&gt;一応USBコネクタにもいくつかの種類があるので簡単に特徴を説明すると&lt;/p&gt;
+&lt;h5 id=&quot;usb-a&quot;&gt;USB A&lt;/h5&gt;
+&lt;p&gt;パソコンについてるあれ。  &lt;br /&gt;
+自分で実装しようとするとコネクタのサイズが大きくて邪魔になるから基本使わない&lt;/p&gt;
+&lt;h5 id=&quot;マイクロusb&quot;&gt;マイクロUSB&lt;/h5&gt;
+&lt;p&gt;基板で実装する際表と裏とかいう初見殺し仕様がある上に、表面実装だからコネクタが パータンごと剥がれてしまうことがあるからおすすめはしない。 
+こんな感じになります。    &lt;br /&gt;
+&lt;img src=&quot;/assets/img/posts/20210305/micro-usb-issue.jpg&quot; alt=&quot;マイクロUSB&quot; /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;minib&quot;&gt;MiniB&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210305/mini-b.jpg&quot; alt=&quot;MiniB&quot; /&gt;&lt;br /&gt;
+&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gC-02235/&quot;&gt;MiniB&lt;/a&gt;だけ初めて聞くって人もいるかもしれません。&lt;br /&gt;
+MiniBはArduino NanoやNucleo64シリーズに使われてるやつです。   &lt;br /&gt;
+特にデメリットはないのでおすすめ。&lt;/p&gt;
+&lt;h5 id=&quot;usb-c&quot;&gt;USB C&lt;/h5&gt;
+&lt;p&gt;タイプCともいわれるやつ。 &lt;br /&gt;
+かっこいいけど、実装するのはいろいろめんどくさいのでおすすめはしない。&lt;/p&gt;
+&lt;h3 id=&quot;rj45&quot;&gt;RJ45&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210305/rj45.jpg&quot; alt=&quot;rj45&quot; /&gt;  &lt;br /&gt;
+&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gC-00159/&quot;&gt;RJ45&lt;/a&gt;はLANケーブルのコネクタに使われてるあれです。恐らくLEGOのコネクタもこれ。 &lt;br /&gt;
+RJ45はノイズに強い規格なのでロボコンで使ってるチームがたまにいます。  &lt;br /&gt;
+ロボ研では使ってません。&lt;/p&gt;
+&lt;h1 id=&quot;電源用のコネクタ&quot;&gt;電源用のコネクタ&lt;/h1&gt;
+&lt;p&gt;先ほども述べたように電源用のコネクタはXHなどでも問題はありません。&lt;br /&gt;
+ですが、&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;乾電池であればXHコネクタを使って電源を取り出しても大丈夫です。  &lt;br /&gt;
+ただ、この方法をやるとXHコネクタのところにジャンパー線を差して、いろんなところにショートさせた人がたくさんいたので、基本的には禁止です。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;というようなことがあるのと、XHには3Aくらいまでしか電流が流せないので、それ以上流す場合には電源用のコネクタが必要です。&lt;/p&gt;
+
+&lt;p&gt;種類としては&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Tコネクタ&lt;/li&gt;
+  &lt;li&gt;XT60&lt;/li&gt;
+  &lt;li&gt;ネジ端子&lt;/li&gt;
+  &lt;li&gt;VHコネクタ
+があります。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;コネクタのオスとメスについては、バッテリー側がメスになるように使います。&lt;/strong&gt;  &lt;br /&gt;
+このルールは必ず覚えてください。&lt;/p&gt;
+
+&lt;p&gt;余談ですが、ピンヘッダは1つあたりのピンには3Aしか流せませんが、10個のピンを使えば30A流すことができるようになります。  &lt;br /&gt;
+モータードライバとかでたくさんピンヘッダ並べてるのはよく見かけます。&lt;/p&gt;
+
+&lt;h3 id=&quot;tコネクタ&quot;&gt;Tコネクタ&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210305/t.jpg&quot; alt=&quot;T&quot; /&gt;&lt;br /&gt;
+Tコネクタは名前の通りT字になっています。  &lt;br /&gt;
+特徴としては&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;たくさん電流が流せる&lt;/li&gt;
+  &lt;li&gt;コネクタにケーブルを接続する際ははんだ付けだから強度が圧着と比べて弱いらしい(スルーで大丈夫)&lt;/li&gt;
+  &lt;li&gt;横向きの基板実装ができない
+ロボ研では&lt;a href=&quot;www.amazon.co.jp/dp/B01HGK4E5I&quot;&gt;保護カバーのついたTコネクタ&lt;/a&gt;を使っています。詳しい、はんだ付けの方法については今度記事にします。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;コネクタにケーブルを接続する際ははんだ付けだから強度が圧着と比べて弱いらしい&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;はんだ付けに関する知識ですが、ケーブルははんだ付けをするともろくなってはんだ割れしやすくなります。&lt;br /&gt;
+頭の中のイメージだとはんだをたくさんつける=強くなりそうなイメージだけど、実ははんだというのはもろい素材です。芋はんだがよくないというのもはんだを付けすぎるともろくなって、はんだ割れを引き起こしやすくなるというのから来ているはず。&lt;/p&gt;
+
+&lt;p&gt;なのでケーブルに関してははんだ付けはしない方がいいと言われています。  &lt;br /&gt;
+それゆえに、Tコネクタは一定数好まない人もいます。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ちなみにこのようなターミナルブロックにケーブルを差し込むときは、ケーブルにはんだは付けないでそのままの状態で差し込むのが正しい方法です。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;xt60&quot;&gt;XT60&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210305/xt60.jpg&quot; alt=&quot;XT60&quot; /&gt;  &lt;br /&gt;
+Tコネクタを採用してない学校は&lt;a href=&quot;https://store.shopping.yahoo.co.jp/suzakulab/search.html?p=xt60#CentSrchFilter1&quot;&gt;XT60&lt;/a&gt;を採用しています。 &lt;br /&gt;
+XT60の60は最大で流せる電流が60Aだよって意味で、他に&lt;a href=&quot;https://store.shopping.yahoo.co.jp/suzakulab/search.html?p=xt30#CentSrchFilter1&quot;&gt;XT30&lt;/a&gt;や&lt;a href=&quot;https://store.shopping.yahoo.co.jp/suzakulab/search.html?p=xt90#CentSrchFilter1&quot;&gt;XT90&lt;/a&gt;なども存在しています。   &lt;br /&gt;
+XT60の特徴としては&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Tコネクタの欠点である基板に横向きの実装ができる。&lt;a href=&quot;https://store.shopping.yahoo.co.jp/suzakulab/amass-xt60pw-m.html&quot;&gt;参考&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;使ったことないので詳しいことは分からないです。&lt;br /&gt;
+個人的にこのコネクタは基板に横向きの実装ができるのが魅力的で、導入を検討しています。&lt;/p&gt;
+&lt;h3 id=&quot;ネジ端子&quot;&gt;ネジ端子&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210305/neji.jpg&quot; alt=&quot;ネジ端子&quot; /&gt; &lt;br /&gt;
+&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gP-09673/&quot;&gt;ネジ端子&lt;/a&gt;とは写真の通りです。コネクタというかは微妙です()&lt;br /&gt;
+どこかで見たことある方もいるかもしれません。  &lt;br /&gt;
+特徴としては&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;2枚まで重ねることができる&lt;/li&gt;
+  &lt;li&gt;取り外しが可能&lt;/li&gt;
+  &lt;li&gt;使ってみると意外と便利&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;特徴の説明が的確ではなくてすみません。&lt;br /&gt;
+でも、使ってて別のコネクタを採用する理由もないなって思ってるので、僕はこの端子を基板側に取りつけています。&lt;/p&gt;
+&lt;h3 id=&quot;vhコネクタ&quot;&gt;VHコネクタ&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210305/vh.jpg&quot; alt=&quot;VH&quot; /&gt;  &lt;br /&gt;
+&lt;a href=&quot;https://akizukidenshi.com/catalog/c/cvhconn/&quot;&gt;VHコネクタ&lt;/a&gt;はXHよりは電流流したいよって人向け。&lt;br /&gt;
+10Aまで流せる。 &lt;br /&gt;
+ピンの間隔が3.96mmなのが使いにくい。ロボコンではコネクタのサイズを気にする必要がないくらいにはロボットが大きいのであまり使われない。&lt;/p&gt;
+&lt;h1 id=&quot;次回&quot;&gt;次回&lt;/h1&gt;
+&lt;p&gt;次回からは回路設計編です。&lt;/p&gt;
+
+&lt;p&gt;コネクタの圧着方法などについては今後解説予定です。&lt;br /&gt;
+分からないところがあればいつでも質問してください！&lt;/p&gt;
+</description>
+        <pubDate>Thu, 04 Mar 2021 15:00:00 +0000</pubDate>
+        <link>https://Nchcappuccino.github.io/blog/2021-03-05/</link>
+        <guid isPermaLink="true">https://Nchcappuccino.github.io/blog/2021-03-05/</guid>
+      </item>
+    
+      <item>
+        <title>ロボコンでよく使われるパーツ センサー編</title>
+        <description>&lt;h1 id=&quot;ロボコンでよく使われるパーツ-センサー編&quot;&gt;ロボコンでよく使われるパーツ センサー編&lt;/h1&gt;
+&lt;p&gt;このブログを書いてる時刻が3月3日の21:32分です。 
+世間はひな祭りらしいですね。僕は&lt;a href=&quot;https://www.youtube.com/watch?v=f6ZtHsHHTvA&amp;amp;ab_channel=SoraCh.%E3%81%A8%E3%81%8D%E3%81%AE%E3%81%9D%E3%82%89%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB&quot;&gt;ときのそらの新衣装お披露目配信&lt;/a&gt;を見て知りました()&lt;br /&gt;
+配信の内容は最高でした。&lt;/p&gt;
+
+&lt;p&gt;強引な布教してすみませんw&lt;/p&gt;
+&lt;h1 id=&quot;内容&quot;&gt;内容&lt;/h1&gt;
+&lt;p&gt;今回の内容はセンサー編ですが、センサーと言っても大きく分けて&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;センサーから出力される電圧をマイコンで読み取る方式&lt;/li&gt;
+  &lt;li&gt;センサーとマイコンでSPIやI2Cなどを用いて通信をしてセンサーの値を取得する方式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;の2種類のデータの取得方法があります。&lt;br /&gt;
+UARTやI2Cは通信方式のことです。これらの通信方式が何か分からない方もいるとは思いますが、今は通信に関係する何かなんだなくらいのイメージで大丈夫です。&lt;/p&gt;
+&lt;h1 id=&quot;距離センサー&quot;&gt;距離センサー&lt;/h1&gt;
+&lt;p&gt;距離センサーとか距離を計測するセンサーですが大きく分けて&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;超音波を出力して、超音波の返ってくる時間を計測する超音波センサー&lt;/li&gt;
+  &lt;li&gt;赤外線を出力して、赤外線の帰ってくる時間を計測するToFセンサー&lt;/li&gt;
+  &lt;li&gt;ToFセンサーを発展させたLidarセンサー&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;があります。&lt;/p&gt;
+&lt;h3 id=&quot;超音波センサー&quot;&gt;超音波センサー&lt;/h3&gt;
+&lt;p&gt;超音波センサーは2つあるでっぱりの片方から超音波を出力して、もう片方で超音波を受信します。(下の画像参照)    &lt;br /&gt;
+中学校で習った通り、音は&lt;strong&gt;約&lt;/strong&gt;340m/sで進むことを利用して、対象の物体に超音波を当てて、返ってくるまでの時間を計測することで距離を割り出しています。  &lt;br /&gt;
+ただ、音は340m/sで進むので遅いです。つまり距離の計測に時間がかかります。  &lt;br /&gt;
+指向性が悪いため精度もあまり出ないので、ロボコンでは採用される機会は少ないです。&lt;/p&gt;
+
+&lt;p&gt;代表的な物としては&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gM-11009/&quot;&gt;HCSR04&lt;/a&gt;があります。&lt;br /&gt;
+利点は安いことくらい。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210304/hcsr04.jpg&quot; alt=&quot;HCSR04&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tofセンサー&quot;&gt;ToFセンサー&lt;/h3&gt;
+&lt;p&gt;ToFセンサーは超音波センサーと違い、赤外線を出力するので計測時間も短いだけでなく、指向性が高いゆえに精度も高いです。&lt;br /&gt;
+ロボコンだけでなく、ドローンや車の自動運転などにも採用される今注目されている技術です。&lt;br /&gt;
+センサーの出力はI2Cで取得したデータを吐き出すのが主流です。&lt;/p&gt;
+
+&lt;p&gt;I2Cなどで通信をする必要のあるセンサーはToFセンサーのように高性能なセンサーに使われることがほとんどです。その分値段は、電圧でセンサーの値が読める物と比べると高いです。&lt;/p&gt;
+
+&lt;p&gt;ToFセンサー代表的なものとしてはVLシリーズです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210304/tof_vl.jpg&quot; alt=&quot;ToF_VL&quot; /&gt;&lt;br /&gt;
+&lt;a href=&quot;https://store.shopping.yahoo.co.jp/suzakulab/pololu-3415.html&quot;&gt;https://store.shopping.yahoo.co.jp/suzakulab/pololu-3415.html&lt;/a&gt;
+&lt;a href=&quot;https://store.shopping.yahoo.co.jp/suzakulab/Pololu-2489.html&quot;&gt;https://store.shopping.yahoo.co.jp/suzakulab/Pololu-2489.html&lt;/a&gt;&lt;br /&gt;
+この2つは性能は全く異なるものの外形が一緒なので、扱いが楽です。&lt;/p&gt;
+
+&lt;p&gt;ちなみにですが、このToFセンサーのようにPololuから発売されてるセンサーはいろいろと素晴らしいのでおすすめです。&lt;/p&gt;
+
+&lt;h3 id=&quot;lidarセンサー&quot;&gt;Lidarセンサー&lt;/h3&gt;
+&lt;p&gt;LidarセンサーはToFセンサーを応用させたセンサーで、全方位の正確な距離の計測が可能です。   &lt;br /&gt;
+ただ、扱うには難しい数学の知識などが必要になるので今回は割愛します。&lt;/p&gt;
+&lt;h1 id=&quot;ジャイロセンサー&quot;&gt;ジャイロセンサー&lt;/h1&gt;
+&lt;p&gt;ジャイロセンサーとは別名角速度センサーと呼ばれ、角速度を検出するデバイスのことです。&lt;br /&gt;
+角速度を積分して角度を検出することができます。&lt;br /&gt;
+ジャイロセンサーについて分かりやすいブログを乗っけておくので、必ず読んでみてください。&lt;br /&gt;
+&lt;a href=&quot;https://garchiving.com/angular-from-angular-acceleration/&quot;&gt;https://garchiving.com/angular-from-angular-acceleration/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;原理&quot;&gt;原理&lt;/h3&gt;
+&lt;p&gt;原理というかジャイロセンサーを理解するための説明です。&lt;/p&gt;
+
+&lt;h5 id=&quot;what-is-角速度&quot;&gt;What is 角速度&lt;/h5&gt;
+&lt;p&gt;角速度というのが何か分からない人がほとんどだと思うのでまずはそこから説明します。&lt;br /&gt;
+角速度とは単位時間あたりに回転した角度のことで、&lt;br /&gt;
+1秒後に30度の角度であれば角速度は30deg/sで、10秒後に50度の角度であれば5deg/sになります。 
+ちなみに1秒後に-30度の角度であれば角速度は-30deg/sになります。&lt;/p&gt;
+&lt;h5 id=&quot;角速度からどうやって角度をもとめるの&quot;&gt;角速度からどうやって角度をもとめるの？&lt;/h5&gt;
+&lt;p&gt;上のリンクのブログでも説明されてるように、角速度に角速度を検出する時間の間隔(dt)を掛けて足し続けると角度をもとめることができます。&lt;br /&gt;
+プログラムではこれが&lt;strong&gt;積分&lt;/strong&gt;という処理に当たります。&lt;br /&gt;
+ただ数字を足すだけの簡単な処理です。&lt;/p&gt;
+
+&lt;p&gt;ここら辺はいろいろ難しいので、最初は分からいのが当然だと思います。
+&lt;strong&gt;分からないときは分からない単語を調べて理解する、それでも理解できなかったら詳しそうな人に聞くようにしましょう。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;代表的なもの&quot;&gt;代表的なもの&lt;/h3&gt;
+&lt;p&gt;これに関してはいろいろ種類があるので僕の意見になってしまいますが、&lt;a href=&quot;www.amazon.co.jp/dp/B008BOPN40&quot;&gt;MPU6050&lt;/a&gt;、&lt;a href=&quot;www.amazon.co.jp/dp/B0154PM102&quot;&gt;MPU9250&lt;/a&gt;、&lt;a href=&quot;https://www.switch-science.com/catalog/5511/&quot;&gt;BNO055&lt;/a&gt;かなと思ってます。&lt;br /&gt;
+&lt;strong&gt;これらのセンサーはArduinoのライブラリが充実してるのとネットに情報もたくさん集まっているので知識がなくても使えます。(ここ大事)&lt;/strong&gt;&lt;/p&gt;
+&lt;h5 id=&quot;mpu6050&quot;&gt;MPU6050&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210304/mpu6050.jpg&quot; alt=&quot;MPU6050&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;安い&lt;/li&gt;
+  &lt;li&gt;簡単な上に超高性能&lt;/li&gt;
+  &lt;li&gt;特にデメリットのないバランスの取れたセンサー
+    &lt;h5 id=&quot;mpu9250&quot;&gt;MPU9250&lt;/h5&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210304/mpu9250.jpg&quot; alt=&quot;MPU9250&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;MPU6050の上位互換だが、その分いい値段する&lt;/li&gt;
+  &lt;li&gt;クオータニオンといういろいろ補正されたデータを出力してくれる&lt;/li&gt;
+  &lt;li&gt;SPIでも通信できる&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;現在製造されてない(ディスコン)。Amazonとかに在庫はたくさんあるからしばらくは気にしなくていい&lt;/strong&gt;
+    &lt;h5 id=&quot;bno055&quot;&gt;BNO055&lt;/h5&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210304/bno055.jpg&quot; alt=&quot;BNO055&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;高い&lt;/li&gt;
+  &lt;li&gt;こちらもクオータニオンを出力してくれる&lt;/li&gt;
+  &lt;li&gt;ちゃんと使ったことないから詳しいことはわかんない、ごめんなさい！！！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;僕はMPU9250を使ってます。 &lt;br /&gt;
+使ってる理由に特に深い意味はないです()&lt;/p&gt;
+
+&lt;p&gt;ちなみにジャイロセンサーもセンサーの内部で高度な計算を行っているのでマイコンと通信してセンサーの値を得る方式が普通です。&lt;/p&gt;
+
+&lt;h1 id=&quot;エンコーダ&quot;&gt;エンコーダ&lt;/h1&gt;
+&lt;p&gt;エンコーダとはロボットがどこにいるかを判断するのに使う道具です。ちなみにロボットがどこにいるかを判断することを&lt;strong&gt;自己位置推定&lt;/strong&gt;や&lt;strong&gt;オドメドリ&lt;/strong&gt;と言います。&lt;/p&gt;
+&lt;h3 id=&quot;原理-1&quot;&gt;原理&lt;/h3&gt;
+&lt;p&gt;こちらの資料をみていただければわかりやすいです。&lt;strong&gt;必ず読んでください！&lt;/strong&gt;&lt;br /&gt;
+原理だけでなく自己位置推定の方法も記されているのでちょっと長いけどかなり参考になります。&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Nchcappuccino/Nchcappuccino.github.io/tree/master/assets/download/encoder_kit06_kaisetsu.pdf&quot;&gt;https://github.com/Nchcappuccino/Nchcappuccino.github.io/tree/master/assets/download/encoder_kit06_kaisetsu.pdf&lt;/a&gt;
+エンコーダはロボコンでは2相か3相のものが主流で、このように配置されることが多いです。&lt;/p&gt;
+&lt;h3 id=&quot;代表的なもの-1&quot;&gt;代表的なもの&lt;/h3&gt;
+&lt;p&gt;エンコーダはロボコンでは&lt;a href=&quot;https://www.mouser.jp/ProductDetail/CUI-Devices/AMT102-V/?qs=WyjlAZoYn533PQfgnorrMg==&quot;&gt;AMT102&lt;/a&gt;が主流です。&lt;br /&gt;
+方式としては、インクリメンタル方式を応用したもので、原点信号と呼ばれるZ相が存在してるので疑似アブソリュート方式と呼ばれる方式に該当します。ちなみにZ相のZはZeroの意味らしい。  &lt;br /&gt;
+機械側がモータの軸にぶっさすだけでエンコーダが使えるのが特徴。&lt;br /&gt;
+だた、電源電圧が5Vなのが欠点。&lt;/p&gt;
+
+&lt;p&gt;京大の2019のロボットのエンコーダは&lt;a href=&quot;https://www.digikey.jp/product-detail/ja/cui-devices/AMT203-V/102-2050-ND/2278846&quot;&gt;AMT203&lt;/a&gt;を使ってるらしいです。&lt;br /&gt;
+SPIでカウントできるのが特徴。
+&lt;a href=&quot;http://kikaiken.blogspot.com/2019/10/nhkabu2019.html&quot;&gt;http://kikaiken.blogspot.com/2019/10/nhkabu2019.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ちなみに、ロボ研では自作磁器エンコーダを使ってます。安い分、機械の人の手間が増えます()&lt;/p&gt;
+
+&lt;h1 id=&quot;カメラ&quot;&gt;カメラ&lt;/h1&gt;
+&lt;p&gt;カメラはOpenCVを用いて画像解析に使われます。  &lt;br /&gt;
+ロボコンでは&lt;a href=&quot;https://www.switch-science.com/catalog/3633/&quot;&gt;D435&lt;/a&gt;という最強のパソコンに最強のカメラの搭載されたものが使われる気がします(語彙力)  &lt;br /&gt;
+RCJだと、&lt;a href=&quot;https://www.switch-science.com/catalog/3905/&quot;&gt;Pixy2&lt;/a&gt;や&lt;a href=&quot;https://www.switch-science.com/catalog/5537/&quot;&gt;OpenMV&lt;/a&gt;が多く使われます。サイズが小さい分、性能はD435とかに比べると大きく劣ります。&lt;/p&gt;
+
+&lt;h1 id=&quot;次回&quot;&gt;次回&lt;/h1&gt;
+&lt;p&gt;次回はコネクタ編です。&lt;br /&gt;
+内容が明らかに入門ではない気がしますが、こんなパーツがロボコンでは使われてるんだなーくらいに理解してもらえれば大丈夫です。&lt;/p&gt;
+
+&lt;h1 id=&quot;おまけ&quot;&gt;おまけ&lt;/h1&gt;
+&lt;p&gt;細かい通信の方式については今後解説するんですけど、I2Cは&lt;strong&gt;アイ・スクエアド・シーやアイ・ツー・シー&lt;/strong&gt;と読みます。&lt;br /&gt;
+僕は周りの人間が前者の読み方をしてるんで合わせていますが、本当は後者の読み方が好きです。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 03 Mar 2021 15:00:00 +0000</pubDate>
+        <link>https://Nchcappuccino.github.io/blog/2021-03-04/</link>
+        <guid isPermaLink="true">https://Nchcappuccino.github.io/blog/2021-03-04/</guid>
+      </item>
+    
+      <item>
+        <title>ロボコンでよく使われるパーツ マイコン編</title>
+        <description>&lt;h1 id=&quot;ロボコンでよく使われるパーツ-マイコン編&quot;&gt;ロボコンでよく使われるパーツ マイコン編&lt;/h1&gt;
+&lt;p&gt;こんにちは！山口です。&lt;br /&gt;
+今日からブログを本格的に運用していこうと思います。&lt;/p&gt;
+&lt;h1 id=&quot;内容&quot;&gt;内容&lt;/h1&gt;
+&lt;p&gt;内容はタイトル通り、ロボコンでよく使われるパーツ マイコン編です。&lt;br /&gt;
+この記事は入門と言いながらも、難しい内容も結構混ざっているので分からないところは読み飛ばしながらで構いません。&lt;br /&gt;
+今の自分では理解できなくても、&lt;strong&gt;半年後の自分なら理解できる&lt;/strong&gt;と考えれば問題ないです。&lt;/p&gt;
+
+&lt;h1 id=&quot;マイコン&quot;&gt;マイコン&lt;/h1&gt;
+&lt;p&gt;マイコンとは簡単に言うと、人間でいう頭脳のことで、プログラミングをすることによって命令ができるようになります。&lt;br /&gt;
+よく使われるのは&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Arduino&lt;/li&gt;
+  &lt;li&gt;Arduinoから派生したもの&lt;/li&gt;
+  &lt;li&gt;STM32&lt;/li&gt;
+  &lt;li&gt;PIC&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;などがあります。&lt;/p&gt;
+
+&lt;p&gt;僕がマイコンを選ぶときは&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Arduinoのライブラリを使うことができるか&lt;/li&gt;
+  &lt;li&gt;値段&lt;/li&gt;
+  &lt;li&gt;なるべく慣れているものを選ぶ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;を大切にしています。  &lt;br /&gt;
+ちなみに僕は、ESP32とSTM32を使っていて、Arduinoのライブラリを使いたいときや無線で通信をしたいときはESP32、そうでないときはSTM32というように使い分けています。&lt;/p&gt;
+&lt;h3 id=&quot;arduinoアルディーノ&quot;&gt;Arduino(アルディーノ)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210303/arduino.jpg&quot; alt=&quot;Arduino&quot; /&gt;&lt;br /&gt;
+&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gM-07385/&quot;&gt;Arduino&lt;/a&gt;はマイコンの名前ではなくマイコンボードの名前ですが、特に理由がない限りArduinoで通じます。&lt;br /&gt;
+マイコンとマイコンボードの違いは&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;マイコンはチップ単体のみのこと&lt;/li&gt;
+  &lt;li&gt;マイコンボードはチップが実装されてる基板全体&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;のことを指します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210303/arduino_explain.jpg&quot; alt=&quot;Arduino_exprain&quot; /&gt;&lt;br /&gt;
+Arduino Unoで言うと、マイコンはATmega328P、マイコンボードの名前がArduino Unoになります。&lt;br /&gt;
+実はArduinoにはマイコンが2つ乗ってたりします(知らなくていい)&lt;br /&gt;
+Arduinoの特徴としては&lt;/p&gt;
+&lt;h5 id=&quot;メリット&quot;&gt;メリット&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;開発がめっちゃ簡単&lt;/li&gt;
+  &lt;li&gt;日本語の情報も多い&lt;/li&gt;
+  &lt;li&gt;ライブラリが豊富&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;デメリット&quot;&gt;デメリット&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;正規品は頭おかしいくらいに高い&lt;/li&gt;
+  &lt;li&gt;難しいことをことをするには性能が足りない&lt;/li&gt;
+  &lt;li&gt;そんなにコスパよくない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;僕としては、入門にはArduino。何か物を作るときはAduinoの派生マイコンを使うと、性能が高い上にArduinoの開発が簡単だという長所を生かせるのでいいと思います。&lt;br /&gt;
+ちなみに、Arduinoには&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gM-07385/&quot;&gt;Arduino Uno&lt;/a&gt;意外には、&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gM-07381/&quot;&gt;Arduino Mega&lt;/a&gt;、&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gM-09059/&quot;&gt;Arduino Nano&lt;/a&gt;や&lt;a href=&quot;www.amazon.co.jp/dp/B072F5NS4X&quot;&gt;中華の互換Arduino&lt;/a&gt;などがあります。&lt;/p&gt;
+&lt;h3 id=&quot;arduinoから派生したマイコン&quot;&gt;Arduinoから派生したマイコン&lt;/h3&gt;
+&lt;p&gt;Arduinoの開発環境でもっと強いマイコンを使えるようにしたのがArduinoから派生したマイコンです。&lt;br /&gt;
+派生なので種類は無数にありますが、&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gM-15673/&quot;&gt;ESP32&lt;/a&gt;と&lt;a href=&quot;https://www.switch-science.com/catalog/5877/&quot;&gt;Teensy&lt;/a&gt;が有名です。&lt;/p&gt;
+&lt;h3 id=&quot;esp32&quot;&gt;ESP32&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210303/ESP32.jpg&quot; alt=&quot;ESP32&quot; /&gt;&lt;br /&gt;
+ロボ研では普段はこのマイコンを使ってます。ロボコンで使ってるチームがいる以外にも、IoT製品などにもよく使われています。&lt;br /&gt;
+ちなみに&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gM-15673/&quot;&gt;ESP32&lt;/a&gt;は他のマイコンと比べて種類が少なく、数種類しかありません。&lt;/p&gt;
+
+&lt;h5 id=&quot;メリット-1&quot;&gt;メリット&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;Arduinoと同じ開発環境で開発が可能&lt;/li&gt;
+  &lt;li&gt;コアが2つついてて、しかも動作クロックが240MHzだから超速い&lt;/li&gt;
+  &lt;li&gt;wifiとbluetoothが使えるから、IoTなどにも使える、ゲーム機のコントローラーとの通信も簡単&lt;/li&gt;
+  &lt;li&gt;ESP32でしかできないことの豊富なライブラリ&lt;/li&gt;
+  &lt;li&gt;コスパいい &lt;a href=&quot;https://akizukidenshi.com/catalog/g/gM-15675/&quot;&gt;マイコン単体&lt;/a&gt;は360円くらい、開発ボード(そのままブレッドボードにぶっさせるやつ)でも1200円くらい
+    &lt;h5 id=&quot;デメリット-1&quot;&gt;デメリット&lt;/h5&gt;
+  &lt;/li&gt;
+  &lt;li&gt;サイズが大きくて、回路設計がかなりしにくい&lt;/li&gt;
+  &lt;li&gt;自由に使えるピンの数が少ない&lt;/li&gt;
+  &lt;li&gt;PWM関係の設定があまり細かくできないので、本気でアクチュエータ動かすのには不向き&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.switch-science.com/catalog/3647/&quot;&gt;M5Stack&lt;/a&gt;という面白いのもあるので興味のある方は調べてみてください。&lt;br /&gt;
+&lt;strong&gt;AmazonやAliexpressなどでもESP32が安く出回っていますが、技適が通っていないことがあるので購入するときは電子部品を専門で扱っているサイトで買いましょう。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;teensy&quot;&gt;Teensy&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210303/teensy.jpg&quot; alt=&quot;Teensy&quot; /&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.switch-science.com/catalog/5877/&quot;&gt;Teensy&lt;/a&gt;は僕や僕の周りに使ってる人間がいないので詳しいことは分からないので、僕の印象で書きます。&lt;/p&gt;
+
+&lt;p&gt;このマイコンも高専ロボコンだけでなく、RCJ(ロボカップジュニア)やロボマスなどでよく使われています。&lt;/p&gt;
+&lt;h5 id=&quot;メリット-2&quot;&gt;メリット&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;Arduinoと同じ開発環境で開発が可能&lt;/li&gt;
+  &lt;li&gt;性能がレベチ、間違いなく今回紹介するマイコンの中では性能が高い&lt;/li&gt;
+  &lt;li&gt;小さなサイズでたくさんのピンが使えるのでユニバーサル基板を使った開発には一番向いてるかも
+    &lt;h5 id=&quot;デメリット-2&quot;&gt;デメリット&lt;/h5&gt;
+  &lt;/li&gt;
+  &lt;li&gt;高い&lt;/li&gt;
+  &lt;li&gt;英語込みで考えても情報が少ない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;正直Teensyは高いので使う意味はない気がします。&lt;/p&gt;
+&lt;h3 id=&quot;stm32nucleo&quot;&gt;STM32(Nucleo)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/posts/20210303/stm32.jpg&quot; alt=&quot;STM32&quot; /&gt;&lt;br /&gt;
+Nucleoと書いてヌクレオと読みます。  &lt;br /&gt;
+&lt;a href=&quot;https://akizukidenshi.com/catalog/g/gM-10176/&quot;&gt;STM32&lt;/a&gt;は扱えれば最強のマイコンです。&lt;br /&gt;
+僕も扱っていますが、ほとんど使いこなせていません。
+扱うにはかなりの知識と技術が必要です。&lt;br /&gt;
+ロボコンだけでなく、企業などでもいろんなことに世界的に使われています。&lt;/p&gt;
+
+&lt;h5 id=&quot;メリット-3&quot;&gt;メリット&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;安くて、超高性能、GPIOが強力なのでセンサーを読むのやアクチュエータを&lt;strong&gt;本気で&lt;/strong&gt;動かすのに向いてる&lt;/li&gt;
+  &lt;li&gt;マイコンの機能を細かく設定できる&lt;/li&gt;
+  &lt;li&gt;多様な開発環境(Arduino IDEからCubeIDE、Mbedまで)&lt;/li&gt;
+  &lt;li&gt;シリーズが多いので、自分の合った用途に、詳しいことは改めて記事にするかも
+    &lt;h5 id=&quot;デメリット-3&quot;&gt;デメリット&lt;/h5&gt;
+  &lt;/li&gt;
+  &lt;li&gt;頭おかしいくらいに難しい&lt;/li&gt;
+  &lt;li&gt;入手性が悪い、基本的には&lt;a href=&quot;https://www.mouser.jp/&quot;&gt;mouser&lt;/a&gt;や&lt;a href=&quot;https://www.digikey.jp/&quot;&gt;digikey&lt;/a&gt;などで海外から入手するしかない&lt;/li&gt;
+  &lt;li&gt;Arduinoのライブラリが使えない()&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;これは僕がこの前実際に起きた出来事なんですけど、STM32F446ret6を購入しようとしたら、mouserとdigikeyの両方で在庫が切れていて購入できないという事件が起きました。&lt;br /&gt;
+コロナで半導体の工場の出荷量が減っていてこのようなことがあったので気を付けましょう。&lt;/p&gt;
+
+&lt;h3 id=&quot;pic&quot;&gt;PIC&lt;/h3&gt;
+&lt;p&gt;PICは扱えたらかっこいいマイコンですが、あえて使う理由はないのでおすすめはしないです。&lt;/p&gt;
+
+&lt;h5 id=&quot;メリット-4&quot;&gt;メリット&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;安い
+    &lt;h5 id=&quot;デメリット-4&quot;&gt;デメリット&lt;/h5&gt;
+  &lt;/li&gt;
+  &lt;li&gt;難しい&lt;/li&gt;
+  &lt;li&gt;重い処理は向かない&lt;/li&gt;
+  &lt;li&gt;Arduinoのライブラリが使えない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;結論&quot;&gt;結論&lt;/h1&gt;
+&lt;p&gt;僕のおすすめのマイコンはESP32です。&lt;br /&gt;
+ESP32は初心者でもArduinoと同じように扱えるのでおすすめです。&lt;br /&gt;
+記事を読んで分かった通り、Arduinoのライブラリが使えるか使えないかで開発の難易度が大きく変わることを知ってもらえたら嬉しいです。&lt;/p&gt;
+
+&lt;p&gt;そして、ある程度ESP32を使えるようになったらSTM32とかを使ってみるといいかもしれませんね。&lt;/p&gt;
+
+&lt;p&gt;余談ですが、ArduinoとESP32の開発環境はVSCode+platformIOが簡単なのでおすすめです。&lt;br /&gt;
+今後詳しく紹介する予定です。&lt;/p&gt;
+
+&lt;h1 id=&quot;次回&quot;&gt;次回&lt;/h1&gt;
+&lt;p&gt;次回はセンサー編になると思います。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 03 Mar 2021 02:28:00 +0000</pubDate>
+        <link>https://Nchcappuccino.github.io/blog/2021-03-03/</link>
+        <guid isPermaLink="true">https://Nchcappuccino.github.io/blog/2021-03-03/</guid>
+      </item>
+    
+      <item>
+        <title>Hello World</title>
+        <description>&lt;h2 id=&quot;hello-world&quot;&gt;Hello World&lt;/h2&gt;
+&lt;p&gt;Hello World!
+ブログ始めました。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 01 Mar 2021 14:47:00 +0000</pubDate>
+        <link>https://Nchcappuccino.github.io/blog/2021-03-01/</link>
+        <guid isPermaLink="true">https://Nchcappuccino.github.io/blog/2021-03-01/</guid>
+      </item>
+    
+
+    
+      
+        
+      
+    
+      
+    
+      
+        
+          <item>
+            <title></title>
+            <description>&lt;h3&gt;  {{ page.title }} &lt;/h3&gt;
+
+&lt;div id=&quot;categories&quot;&gt;
+{% for category in site.categories %}
+  &lt;div class=&quot;category-box&quot; &gt;
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    &lt;div id=&quot;#{{ category_name | slugize }}&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;{{ site.baseurl }}/blog/categories/{{ category_name }}&quot;&gt;{{ category_name }}&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;{{ category_name | slugize }}&quot;&gt;&lt;/a&gt;
+     {% for post in site.categories[category_name] %}
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6 &gt;&lt;a href=&quot;{{ site.baseurl }}{{ post.url }}&quot;&gt;{{post.title}}&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    {% endfor %}
+
+  &lt;/div&gt;
+{% endfor %}
+&lt;/div&gt;
+
+
+</description>
+            <link>https://Nchcappuccino.github.io/blog/categories/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.guides %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>https://Nchcappuccino.github.io/blog/categories/guides/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Get Started</title>
+            <description>## Getting Started - How to use “devlopr-jekyll” theme
+
+## What's Jekyll ?
+
+If you aren’t familiar with Jekyll yet, you should know that it is a static site generator. It will transform your plain text into static websites and blogs. No more databases, slow loading websites, risk of being hacked…just your content. And not only that, with Jekyll you get free hosting with GitHub Pages! If you are a beginner we recommend you start with [Jekyll’s Docs](https://jekyllrb.com/docs/installation/). Now, if you know how to use Jekyll, let’s move on to using this theme in Jekyll:
+
+### Steps to create your blog using devlopr-jekyll and Host using Github Pages :
+
+&gt;  **Step 1.**  Fork the repo - [click here](https://github.com/sujaykundu777/devlopr-jekyll/fork)
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork1.png){:class=&quot;img-fluid&quot;}
+
+&gt; **Step 2.** Use **your-github-username.github.io** as the new repo  ( Replace your-github-username with yours). Remember if you use the name other than your-github-username.github.io , your blog will be built using gh-pages branch.
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork2.png){:class=&quot;img-fluid&quot;}
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork3.png){:class=&quot;img-fluid&quot;}
+
+&gt; **Step 3.** Clone the new repo locally to make changes :
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork31.png){:class=&quot;img-fluid&quot;}
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork32.png){:class=&quot;img-fluid&quot;}
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork33.png){:class=&quot;img-fluid&quot;}
+
+```bash
+ $ git clone https://github.com/yourusername/yourusername.github.io
+ $ cd yourusername.github.io
+ $ code .
+```
+
+&gt; **Step 4.** Open the files using VSCode and edit _config.yml and edit with your details:
+
+- _config.yml file - replace with your own details
+- _posts - Add your blog posts here
+- _includes - You can replace the contents of the files with your data. (contains widgets)
+- _assets/img - Add all your images here
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork34.png){:class=&quot;img-fluid&quot;}
+
+&gt; **Step 5** - Install the development requirements:
+
+### Set up local development environment
+
+1. [Git](https://git-scm.com/)
+2. [Ruby](https://www.ruby-lang.org/) and [Bundler](https://bundler.io/)
+3. [VSCode](https://code.visualstudio.com/download)
+
+We need ruby and bundler to build our site locally. After installation check if its working:
+
+For ruby :
+
+```bash
+$ ruby -v
+ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-linux-gnu]
+```
+For bundler :
+
+```bash
+$ gem install bundler
+$ bundler -v
+Bundler version 2.1.4
+```
+Add jekyll :
+
+```bash
+$ bundle add jekyll
+```
+ This command will add the Jekyll gem to our Gemfile and install it to the ./vendor/bundle/ folder.
+
+You can check the jekyll version
+
+```
+$ bundle exec jekyll -v
+jekyll 4.0.0
+```
+
+&gt; **Step 6.** Install the gem dependencies by running the following command
+
+```bash
+$ bundle update
+$ bundle install
+```
+
+&gt; **Step 7.** Serve the site locally by running the following command below:
+
+```bash
+$ bundle exec jekyll serve --watch
+```
+or you can also serve using :
+
+```bash
+$ jekyll serve
+```
+
+Visit [http://localhost:4000](http://localhost:4000) for development server
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork4.png){:class=&quot;img-fluid&quot;}
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork41.png){:class=&quot;img-fluid&quot;}
+
+### Adding Content
+
+Start populating your blog by adding your .md files in _posts. devlopr-jekyll already has a few examples.
+
+#### YAML Post Example:
+
+```yml
+---
+layout: post
+title: Sample Post
+author: Sujay Kundu
+date: '2019-05-21 14:35:23 +0530'
+category:
+        - jekyll
+summary: This is the summary for the sample post
+thumbnail: sample.png
+---
+
+Hi ! This is sample post.
+
+```
+
+#### YAML Page Example:
+
+```yml
+---
+layout: page
+title: Sample Page
+menus: header
+permalink: /sample-page/
+---
+
+Hi ! This is sample page.
+```
+
+#### Editing stylesheet
+
+You’ll only work with a single file to edit/add theme style: assets/css/main.scss.
+
+### Deploy your Changes
+
+Once happy with your blog changes. Push your changes to master branch.
+
+&gt; **Step 8.** Push Your Local Changes
+
+```bash
+ $ git add .
+ $ git commit -m &quot;my new blog using devlopr-jekyll&quot;
+ $ git push origin master
+```
+
+Visit your Github Repo settings ! Enable master branch as Github Pages Branch :
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork6.png){:class=&quot;img-fluid&quot;}
+
+&gt; **Step 9.** Deploy your Blog :
+
+![Devlopr Jekyll Repo](/assets/img/posts/fork7.png){:class=&quot;img-fluid&quot;}
+
+&gt; Congrats ! On your new shining Blog !
+
+You can visit the blog using [http://your-github-username.github.io](http://your-github-username.github.io).
+
+</description>
+            <link>https://Nchcappuccino.github.io/get-started/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Jekyll</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.jekyll %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>https://Nchcappuccino.github.io/blog/categories/jekyll/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Guides</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
+
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.sample_category %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/div&gt;</description>
+            <link>https://Nchcappuccino.github.io/blog/categories/sample_category/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>Our Sponsors</title>
+            <description>Thanks to all the amazing contributors and our Backers for the support.
+
+- [Dirish Mohan](https://dirishmohan.com)</description>
+            <link>https://Nchcappuccino.github.io/sponsors/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Styleguide</title>
+            <description>&lt;h1 class=&quot;text-center&quot;&gt; devlopr jekyll - Styleguide &lt;/h1&gt;
+
+&lt;hr /&gt;
+
+ &lt;img src=&quot;/assets/img/styleguide.png&quot; class=&quot;img-fluid&quot;&gt;
+
+&lt;p&gt; Lets try the different text styles  &lt;b&gt; Bold &lt;/b&gt; , &lt;strong&gt; Strong &lt;/strong&gt;, &lt;em&gt; Emphasis &lt;/em&gt;, &lt;i&gt; Italic &lt;/i&gt; &lt;/p&gt;
+
+
+&lt;p&gt; Now, lets try different heading styles : &lt;/p&gt;
+
+&lt;h1&gt; Hello in h1 ! &lt;/h1&gt;
+&lt;h2&gt; Hello in h2 ! &lt;/h2&gt;
+&lt;h3&gt; Hello in h3 ! &lt;/h3&gt;
+&lt;h4&gt; Hello in h4 ! &lt;/h4&gt;
+&lt;h5&gt; Hello in h5 ! &lt;/h5&gt;
+&lt;h6&gt; Hello in h6 ! &lt;/h6&gt;
+
+&lt;hr /&gt;
+&lt;p&gt; Unordered List &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt; List Item 1 &lt;/li&gt;
+&lt;li&gt; List Item 2 &lt;/li&gt;
+&lt;li&gt; List Item 3 &lt;/li&gt;
+&lt;li&gt; List Item 4 &lt;/li&gt;
+&lt;li&gt; List Item 5 &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; Ordered List &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt; List Item 1 &lt;/li&gt;
+&lt;li&gt; List Item 2 &lt;/li&gt;
+&lt;li&gt; List Item 3 &lt;/li&gt;
+&lt;li&gt; List Item 4 &lt;/li&gt;
+&lt;li&gt; List Item 5 &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is a Block Quote,  It can Expand Multiple Lines &lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight&lt;/mark&gt; text. &lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt; This line of text is meant to be deleted text &lt;/del&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;This line of text will render as underlined&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;abbr title=&quot;attribute&quot;&gt;attr&lt;/abbr&gt;&lt;/p&gt;
+&lt;p&gt;&lt;abbr title=&quot;HyperText Markup Language&quot; class=&quot;initialism&quot;&gt;HTML&lt;/abbr&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;div class=&quot;responsive-table&quot;&gt;
+&lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;col&quot;&gt;#&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Heading&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+          &lt;td&gt;Cell&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt;YouTube Responsive Embed&lt;/h3&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/nuwjUZCSB2Y?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt;Vimeo Responsive Embed&lt;/h3&gt;
+
+&lt;iframe src=&quot;https://player.vimeo.com/video/212114694?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;ted-responsive-embed&quot;&gt;TED Responsive Embed&lt;/h3&gt;
+
+&lt;iframe src=&quot;https://embed.ted.com/talks/ted_halstead_a_climate_solution_where_all_sides_can_win&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;twitch-responsive-embed&quot;&gt;Twitch Responsive Embed&lt;/h3&gt;
+
+&lt;iframe src=&quot;https://player.twitch.tv/?autoplay=false&amp;amp;video=v248755437&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; scrolling=&quot;no&quot; height=&quot;378&quot; width=&quot;620&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;soundcloud-embed&quot;&gt;SoundCloud Embed&lt;/h3&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/29738591&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;codepen-embed&quot;&gt;CodePen Embed&lt;/h3&gt;
+
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;YWvpRo&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;kharrop&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;Referral Form&quot; class=&quot;codepen&quot;&gt;&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;syntax-highlighting&quot;&gt;Syntax Highlighting&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;s1&quot;&gt;'use strict'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;markdown&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'markdown'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Editor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;preview&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;preview&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerHTML&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toHTML&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;editor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can add inline code just like this, E.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;.code { color: #fff; }&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;pre&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#f4f4f4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;github-gist-embed&quot;&gt;GitHub gist Embed&lt;/h3&gt;
+
+&lt;script src=&quot;https://gist.github.com/ahmadajmi/dbb4f713317721668bcbc39420562afc.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;input-style&quot;&gt;Input Style&lt;/h3&gt;
+
+&lt;p&gt;&lt;input type=&quot;text&quot; placeholder=&quot;I'm an input field!&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt; Twitter Embed &lt;/h3&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;I just published “Deploying a blog using Jekyll and Github Pages with SSL certificate for Free” &lt;a href=&quot;https://t.co/B3T3IQVU93&quot;&gt;https://t.co/B3T3IQVU93&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sujay Kundu (@SujayKundu777) &lt;a href=&quot;https://twitter.com/SujayKundu777/status/1012601950469160962?ref_src=twsrc%5Etfw&quot;&gt;June 29, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt; Instagram Embed &lt;/h3&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-permalink=&quot;https://www.instagram.com/p/BhFTg6uhNRi/&quot; data-instgrm-version=&quot;9&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/p/BhFTg6uhNRi/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;&quot; target=&quot;_blank&quot;&gt;A post shared by Ahmad Ajmi (@ahmadajme)&lt;/a&gt; on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2018-04-02T21:18:58+00:00&quot;&gt;Apr 2, 2018 at 2:18pm PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt; &lt;script async defer src=&quot;//www.instagram.com/embed.js&quot;&gt;&lt;/script&gt;
+
+</description>
+            <link>https://Nchcappuccino.github.io/styleguide/</link>
+          </item>
+        
+      
+    
+      
+    
+      
+    
+
+  </channel>
+</rss>
